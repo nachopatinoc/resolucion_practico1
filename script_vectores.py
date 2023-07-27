@@ -10,13 +10,16 @@ def producto_escalar(v1, v2):
     return 
 
 def son_ortogonales(v1, v2):
+
+    producto_punto = 0
+
+    for n in range(len(v1)):
+        producto_punto += v1[n] * v2[n]
     
-    '''
-    Verificar si dos vectores dados son ortogonales. 
-    
-    '''
-        
-    return
+    if producto_punto == 0:
+        return f"El producto punto es {producto_punto}, por lo que ambos vectores SI son perpendiculares"
+    else:
+        return f"El producto punto es {producto_punto}, por lo que ambos vectores NO son perpendiculares"
 
 def son_paralelos(v1, v2):
 
